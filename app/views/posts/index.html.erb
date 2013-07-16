@@ -1,0 +1,9 @@
+<p>I am here</p>
+
+<% @post.each do |post| %>
+<ul>
+	<li><%= link_to post.title, post_path(post.id) %></li>
+	<li><%= post.body %></li>
+	<li><%= post.category %></li>
+</ul>
+<% end %>

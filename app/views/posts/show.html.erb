@@ -1,0 +1,10 @@
+<h3><%= @post.title %></h3>
+<p>
+<%= link_to "Edit", edit_post_path(@post.id) %>
+<%= link_to "Delete", { controller: "posts", action: "destroy", id: @post.id }, { method: :delete }%>
+</p>
+
+<h3>Body</h3>
+<%= @post.body %>
+<h4>Category</h4>
+<%= @post.category.name %>

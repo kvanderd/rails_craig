@@ -1,0 +1,9 @@
+<%= form_for @post do |f| %>
+  <%= f.label :title %><br/>
+  <%= f.text_field :title, :placeholder => "idunno the title" %><br/>
+  <%= f.label :body %><br/>
+  <%= f.text_area :body, :placeholder => "i dont wanna write" %><br />
+  <%= f.select(:category_id, Category.all.collect {|c| [ c.name, c.id ] }) %>
+
+  <%= f.submit %>
+<% end %>
